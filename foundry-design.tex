@@ -1,4 +1,4 @@
-\documentclass{article}
+documentclass{article}
 
 \usepackage[margin=1.85in]{geometry}
 
@@ -96,7 +96,7 @@ But our predictive power is limited here---these are just educated guesses and h
 
 \subsection{Treasury} \label{treasury}
 
-The Foundry Treasury is best described as simply a smart contract wallet controlled by Foundry Governance described in section \ref{governance}. \href{https://github.com/burnable-tech/Foundry/blob/master/smart-contracts/forwarder/contracts/Forwarder.sol}{The Solidity code} is very simple: it has an \verb|owner|, which can perform either 1. an arbitrary Ethereum transaction or 2. a \verb|changeOwner| operation to pass control to some other Ethereum agent.
+The Foundry Treasury is best described as simply a smart contract wallet controlled by Foundry Governance described in section \ref{governance}. \href{https://github.com/team-toast/Foundry/blob/master/smart-contracts/forwarder/contracts/Forwarder.sol}{The Solidity code} is very simple: it has an \verb|owner|, which can perform either 1. an arbitrary Ethereum transaction or 2. a \verb|changeOwner| operation to pass control to some other Ethereum agent.
 
 The Treasury will accumulate assets in two main ways.
 
@@ -120,9 +120,9 @@ Governance of any version will have an upgrade mechanism that uses the common pr
 
 The rest of this document should be considered provisional.
 
-This is the first time this design has been shared with the public, so there may be crucial flaws or overlooked corner-cases we have not considered. We are welcoming feedback via Github Issues \href{https://github.com/burnable-tech/foundry-design/issues}{here}.
+This is the first time this design has been shared with the public, so there may be crucial flaws or overlooked corner-cases we have not considered. We are welcoming feedback via Github Issues \href{https://github.com/team-toast/foundry-design/issues}{here}.
 
-We will update this document as this conversation continues and as the Solidity development proceeds; an updated version of the paper can always be found \href{https://github.com/burnable-tech/foundry-design/releases/latest/download/foundry-design.pdf}{here}. Any version of this document not found at this link should not be considered final or public.
+We will update this document as this conversation continues and as the Solidity development proceeds; an updated version of the paper can always be found \href{https://github.com/team-toast/foundry-design/releases/latest/download/foundry-design.pdf}{here}. Any version of this document not found at this link should not be considered final or public.
 
 \section{Governance v1.0} \label{governance}
 
