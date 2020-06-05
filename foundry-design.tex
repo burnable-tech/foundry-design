@@ -64,7 +64,7 @@ Discussion of Foundry must begin with the FRY holder.
 
 On May 19 2020, sale of the Foundry Logistics Token (FRY) will be initiated via the \href{https://foundrydao.com/faq/#about-the-token-sale}{Foundry Bucket Sale}. For just under 20 months, any Ethereum agent with DAI can deposit this DAI in exchange for freshly minted FRY, the exact pricing of which is determined by the market as described \href{https://foundrydao.com/faq/#how-much-is-the-sale-looking-to-raise}{here}.
 
-As this initial bucket sale concludes, a perpetual sale will be developed and deployed that effectively extends this entry option into the future without bounds.
+As this initial bucket sale concludes, a perpetual sale will be developed and deployed that effectively extends this entry option into the future without bounds. More on this in \ref{perpetual-sale}.
 
 FRY is a basic ERC20 token with minting capabilities (built from OpenZeppelin's tokens \href{https://github.com/OpenZeppelin/openzeppelin-contracts/tree/b1e811430a0a57211bdc5d48bee0fe0ba9101139/contracts/token/ERC20}{here}). Initially there will be two minting keys, one held by the sale to generate the purchased FRY, and one held by Team Toast to grant minting rights to other parts of Foundry as it is built. As Governance is built, it will be granted a minting key to reward participation in Governance as described below.
 
@@ -215,6 +215,14 @@ Most popular DAO designs require a voting quorum. This is to prevent a bad or ma
 Firstly, no proposal can pass in less than 8 days, and if at any time its approval score falls below 60\%, this timer is reset. Secondly, the interface that views the proposals can sort the proposals by how close they are to passing. Thus, if a ``small minority'' tries to pass a bad or malicious proposal, as the proposal approaches the 8 day countdown to execution, it can effectively be ``vetoed'' by any voting power of comparable strength as the minority.
 
 If it doesn't get vetoed, we can assume that everyone who is still interacting with the proposal/voting interface has seen the proposal and has no problem with it passing. This might especially be the case if many who see it wish for it to pass but don't feel comfortable explicitly supporting it, perhaps to maintain plausible deniability. Alternatively, it may be a specialized proposal where many feel they aren't qualified to weigh in on the decision. In either case, the proposal should be allowed to pass.
+
+\subsection{Perpetual Sale} \label{perpetual-sale}
+
+Initially, FRY tokens will be distributed over a 20 month period. As this period ends, Foundry Governance and/or Team Toast is likely to deploy a \textit{perpetual sale}, which works just like the initial sale but has no end date.
+
+This means that FRY supply will be constantly increased. But because the new FRY is being auctioned off to an open market, Foundry's Treasury---and therefore the "backed value" of FRY---will increase at the same rate. Thus, FRY value should not be negatively affected.
+
+The advantage of this is that new investors can provide new funding directly to Foundry in exchange for ownership, without relying on finding someone to sell already-existing FRY, via exchanges or otherwise.
 
 \section{Appendix} \label{appendix}
 
