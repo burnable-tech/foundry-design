@@ -11,7 +11,7 @@
 }
 
 \title{Foundry Design}
-\date{v1.2 - June 2020}
+\date{v1.2.1 - Oct 2020}
 
 \begin{document}
 \pagenumbering{gobble}
@@ -19,11 +19,11 @@
 \maketitle
 \begin{abstract}
 	\setlength{\parskip}{1em}
-	Foundry is to be a DAO on Ethereum that allows anonymous investors and entrepreneurs to fund and build projects that are dangerous to support in the traditional legal framework. This paper describes a provisional design of the mechanisms of such a DAO.
+	Foundry is to be a DAO on Ethereum that allows pseudonymous investors and entrepreneurs to fund and build projects that are dangerous to support in the traditional legal framework. This paper describes a provisional design of the mechanisms of such a DAO.
 	
 	Of particular emphasis is Governance, the method by which holders of FRY influence Foundry's decision making via Liquid Democracy.
 	
-	With the described design, we expect Foundry to to be fully autonomous and for any centralized control or management to be unnecessary.
+	With the described design, we expect Foundry to to be fully autonomous and for any centralized control or management to be unnecessary, making the system as a whole ``unbullyable''.
 	
 	For legal inquiries, see \ref{legal}.
 \end{abstract}
@@ -40,7 +40,7 @@
 
 As the world shifts away from reliance on powerful, centralized institutions, there is a growing demand for systems that can replace them. In a very free market, this demand could be targeted by creative entrepreneurs, and society could look forward to accelerating innovation while rewarding those entrepreneurs with profit.
 
-But the more threatening a project or venture is, and the more it trespasses on sacred doctrines of the conventional institutions, the less we can rely on this natural process. This is because entrepreneurs are afraid of retaliation from powerful institutions, and a legally-based company offers essentially no protection in some of these cases. One only needs to consider Ross Ulbricht's fate to reconsider pushing forward any project that too directly challenges the status quo.
+But the more threatening a project or venture is, and the more it trespasses on sacred doctrines of the conventional institutions, the less we can rely on this natural process. This is because entrepreneurs are afraid of retaliation from powerful institutions, and legally-based companies are vulnerable to legal attacks and aggression fron nation-states. One only needs to consider Ross Ulbricht's fate to reconsider pushing forward any project that too directly challenges the status quo.
 
 Foundry's purpose is to give the would-be Ross Ulbrichts of the world a safer way to advance profitable projects that threaten powerful institutions. It garners investment from pseudonymous agents, and allows them to collaborate in decision making to intelligently build the systems we'll need as the nation-state and other monolithic institutions approach senescence.
 
@@ -64,9 +64,9 @@ Foundry's purpose is to give the would-be Ross Ulbrichts of the world a safer wa
 
 Discussion of Foundry must begin with the FRY holder.
 
-On May 19 2020, sale of the Foundry Logistics Token (FRY) will be initiated via the \href{https://foundrydao.com/faq/#about-the-token-sale}{Foundry Bucket Sale}. For just under 20 months, any Ethereum agent with DAI can deposit this DAI in exchange for freshly minted FRY, the exact pricing of which is determined by the market as described \href{https://foundrydao.com/faq/#how-much-is-the-sale-looking-to-raise}{here}.
+On June 19 2020, sale of the Foundry Logistics Token (FRY) was initiated via the \href{https://sale.foundrydao.com}{Foundry Bucket Sale}. For just under 20 months, any Ethereum agent with DAI can deposit this DAI in exchange for freshly minted FRY, the exact pricing of which is determined by the market as described \href{https://foundrydao.com/faq/#how-much-is-the-sale-looking-to-raise}{here}.
 
-As this initial bucket sale concludes, a perpetual sale will be developed and deployed that effectively extends this entry option into the future without bounds. More on this in \ref{perpetual-sale}.
+As this initial bucket sale concludes, a perpetual sale may be developed and deployed that effectively extends this entry option into the future without bounds. More on this in \ref{perpetual-sale}.
 
 FRY is a basic ERC20 token with minting capabilities (built from OpenZeppelin's tokens \href{https://github.com/OpenZeppelin/openzeppelin-contracts/tree/b1e811430a0a57211bdc5d48bee0fe0ba9101139/contracts/token/ERC20}{here}). Initially there will be two minting keys, one held by the sale to generate the purchased FRY, and one held by Team Toast to grant minting rights to other parts of Foundry as it is built. As Governance is built, it will be granted a minting key to reward participation in Governance as described below.
 
@@ -84,9 +84,7 @@ Some examples of such proposals include:
 
 \item Create micro-DAOs controlled by some subset of FRY holders
 
-\item Invest in other DAOs, trading held assets for the token of the external DAO
-
-\item Swap half of the DAI treasury for ETH, gaining exposure to ETH price increases
+\item Open a \href{https://medium.com/@coinop.logan/preventing-scammer-profit-with-burnable-payments-ad2e9b632ef2}{Burnable Payment} to incentivize some particular action in the real world
 
 \item Leverage DeFi protocols to gain interest on otherwise stationary assets
 
@@ -94,7 +92,7 @@ Some examples of such proposals include:
 
 \end{itemize}
 
-But our predictive power is limited here---these are just educated guesses and hopes. Since any FRY holder can create any proposal, and a proposal can contain any arbitrary Ethereum transaction, we expect to see far more creative proposals than those our small team can think up.
+But our predictive power is limited here---these are just educated guesses and hopes. Since any FRY holder can create any proposal, and a proposal can contain any arbitrary Ethereum transaction, we expect proposals to grow in creativity as Foundry learns what it is capable of.
 
 \subsection{Treasury} \label{treasury}
 
@@ -108,7 +106,7 @@ Second, projects built by Foundry will generally have a profit mechanism, and th
 
 \subsection{Upgrades and Iterative Development} \label{upgrades}
 
-At first, the Treasury will be owned by the Team Toast Secure Multisig. We call this multisig ``governance v0''. Our planned expenditures from the Treasury during this time are described \href{https://foundrydao.com/pre-gov-spending/}{here}.
+At first, the Treasury will be owned by the Team Toast Secure Multisig. We call this multisig ``governance v0''.
 
 As Governance v1.0 (described in the next section) is developed, control of the Treasury will be transferred to successively more complete and autonomous versions of governance. If a given version is still experimental, its control will be guarded or incomplete in certain ways, such as by being a part of a multisig with Team Toast. More possibilities are explored in \ref{training-wheels}.
 
@@ -120,11 +118,9 @@ Governance of any version will have an upgrade mechanism that uses the common pr
 
 \subsection{Provisional Design} \label{provisional}
 
-The rest of this document should be considered provisional.
+The rest of this document should be considered provisional. We are welcoming feedback via Github Issues \href{https://github.com/team-toast/foundry-design/issues}{here}.
 
-This is the first time this design has been shared with the public, so there may be crucial flaws or overlooked corner-cases we have not considered. We are welcoming feedback via Github Issues \href{https://github.com/team-toast/foundry-design/issues}{here}.
-
-We will update this document as this conversation continues and as the Solidity development proceeds; an updated version of the paper can always be found \href{https://github.com/team-toast/foundry-design/releases/latest/download/foundry-design.pdf}{here}. Any version of this document not found at this link should not be considered final or public.
+We will update this document as this conversation continues and as the Solidity development proceeds; an updated version of the paper can always be found \href{https://github.com/team-toast/foundry-design/releases/latest/download/foundry-design.pdf}{here}.
 
 \section{Governance v1.0} \label{governance}
 
@@ -154,9 +150,11 @@ Every time a vote is cast on the proposal, its approval score will be calculated
 
 If a proposal remains in a passing state for 8 days without once switching to a failing state, it is considered \textit{ready to execute}. At this point any Ethereum agent can initiate the proposal's transaction payload in Foundry's name and remove the proposal from the queue. If a proposal remains in a failing state for 8 consecutive days, it is considered \textit{ready to reject}, at which point any Ethereum agent can remove it from the queue.
 
-Note that highly contentious proposals will hover around the 60\% line, flipping between the passing and failing states until everyone who cares will have voted. These proposals may last far longer than only 8 days, but should trend toward a stable sentiment as more FRY voters vote.
+Note that highly contentious proposals will hover around the 60\% line, flipping between the passing and failing states until everyone who cares will have voted. These proposals may last far longer than only 8 days, but should trend toward a stable sentiment as more VFRY holders vote.
 
 If the proposal is rejected, the total amount of ``no and burn'' votes is divided against the total ``no'' and ``no and burn'' votes cast. If this is above 60\%, the proposer's bond is burned. Otherwise it is returned.
+
+(An alternative design would be to burn the bond proportionally; i.e. if the above ratio is 20\%, then 20\% of the bond is burned)
 
 This allows VFRY holders to punish proposals that are either wasteful or spammy, or outright attempts to attack Foundry (i.e. ``transfer ownership of the treasury to my address'').
 
@@ -168,13 +166,13 @@ The bond the user must include with a new proposal depends on how many proposals
 
 where \textit{P} is the number of currently active proposals.
 
-Such an algorithm has some beneficial qualities. Assuming a price of \$0.01/FRY:
+Assuming a price of \$0.01/FRY:
 
-First, if no proposals are in the queue, populating the queue is cheap: \$5 for the first proposal, and \$32 for the 5th. Later proposals are daunting but conceivable: \$343 for the 10th proposal. Larger numbers get prohibitively expensive, with the bond for the 20th proposal costing \$60k.
+First, if no proposals are in the queue, populating the queue is cheap: \$5 for the first proposal, and \$32 for the 5th. Later proposals are daunting but conceivable: \$343 for the 10th proposal. Larger numbers get prohibitively expensive, with the bond for the 20th proposal being \$60k.
 
 An equilibrium will form, where the number of active proposals hovers around a particular value; with this equation we would expect a queue of somewhere between 5 and 12 active proposals. As each proposal gets executed or rejected, the cost of adding another is lowered. Given that each proposal takes at minimum 8 days to resolve, we can expect something close to 1 proposal being resolved each day on average.
 
-Once the sale is live, we will have better pricing info on FRY, and dialogue with the community will help us determine the ideal rate of proposals for Governance. This will help us zero in on an appropriate final formula.
+This is an extremely fast pace of action compared to other DAOs, and given that there is no quorum required on a given proposal, each proposal could serve a cheap, small, targeted purpose that only a small minority support (but which no one opposes).
 
 \subsection{Delegating Votes} \label{delegating}
 
@@ -182,9 +180,13 @@ When a FRY holder initially deposits his FRY for VFRY, he must indicate whether 
 
 Consider two VFRY holders, Alice (holding 1k FRY) and Bob (holding 10k FRY). If Bob delegates to Alice, we can loosely say that Alice is Bob's \textit{representative}, and that Bob is one of Alice's \textit{constituents}. Whenever Alice casts a vote on a given proposal, her vote counts as if she held 11k FRY (hers plus Bob's) rather than only 1k. We can say that Alice has a \textit{voting weight} of 11k VFRY.
 
-If a third party, Carl, delegates his votes to Bob, these will add Carls's VFRY to Alice's voting weight. We can say that Bob is Carl's representative, and that Alice is Carl's \textit{ultimate representative}. Thus, Alice could have a whole tree of constituents beneath her, allowing Alice to perhaps hold significant influence in Foundry despite not owning much FRY.
+If a third party, Carl, delegates his votes to Bob, these will add Carls's VFRY to Alice's voting weight. We can say that Bob is Carl's representative, and that Alice is Carl's \textit{ultimate representative} because she is the one doing the actual voting. Thus, Alice could have a whole tree of constituents beneath her, allowing Alice to perhaps hold significant influence in Foundry despite not owning much FRY.
 
 If Alice votes on a proposal in a way that Bob or Carl are opposed to, one or both of them can immediately de-delegate from Alice to either vote directly or find a better representative. This will remove their voting weight from Alice's vote immediately, allowing them to ``reverse'' any damage they believe she is doing on their behalf in the currently active proposals.
+
+Note that this could change a passing proposal to a failing state, or vise versa. Thus delgating VFRY holders will never be ``stuck with'' a decision they disagree with.
+
+A technical note on managing the delegration graph:
 
 If a VFRY holder wants to delegate to a new depth such that it invalidates his delegation graph (for example, Bob wanting to delegate to someone at a higher \verb|delegation depth| than Carl), a \textit{delegation node} is left behind in the old position to keep the delegation graph intact. This is an empty, dead node: it removes Bob's VFRY from Alice's voting weight, and can't re-delegate or make any decisions. However it still attaches Carl's VFRY to Alice's voting weight.
 
@@ -214,9 +216,11 @@ As some representatives gain more constituents and voting weight, they should na
 
 Most popular DAO designs require a voting quorum. This is to prevent a bad or malicious proposal from passing due to a minority "sneaking it past" the majority. The Governance mechanism described here achieves this in other ways.
 
-Firstly, no proposal can pass in less than 8 days, and if at any time its approval score falls below 60\%, this timer is reset. Secondly, the interface that views the proposals can sort the proposals by how close they are to passing. Thus, if a ``small minority'' tries to pass a bad or malicious proposal, as the proposal approaches the 8 day countdown to execution, it can effectively be ``vetoed'' by any voting power of comparable strength as the minority.
+Firstly, no proposal can pass in less than 8 days, and if at any time its approval score falls below 60\%, this timer is reset. Secondly, the interface that views the proposals can sort the proposals by how close they are to passing. Thus, if a ``small minority'' tries to pass a bad or malicious proposal, as the proposal approaches the 8 day countdown to execution, it will gain visibility to more VFRY holders, and can effectively be ``vetoed'' by any voting power of comparable strength as the minority.
 
-If it doesn't get vetoed, we can assume that everyone who is still interacting with the proposal/voting interface has seen the proposal and has no problem with it passing. This might especially be the case if many who see it wish for it to pass but don't feel comfortable explicitly supporting it, perhaps to maintain plausible deniability. Alternatively, it may be a specialized proposal where many feel they aren't qualified to weigh in on the decision. In either case, the proposal should be allowed to pass.
+If it doesn't get vetoed, we can assume that everyone who is still interacting with the proposal/voting interface has seen the proposal and has no problem with it passing. This might especially be the case if many who see it wish for it to pass but don't feel comfortable explicitly supporting it, perhaps to maintain plausible deniability. Alternatively, it may be a specialized proposal where many feel they aren't qualified to weigh in on the decision. In these cases, the proposal should be allowed to pass.
+
+A significant benefit to this design is that Foundry will never experience voter paralysis, where too few VFRY holders are active to get anything done. As long as a single voter remains active, that voter can propose and pass any proposal he wants, as long as it's not actively denied by some stronger voting power.
 
 \subsection{Perpetual Sale} \label{perpetual-sale}
 
